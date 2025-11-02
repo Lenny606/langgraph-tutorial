@@ -14,7 +14,7 @@ dist/
 build/
 *.egg-info/
 *.egg
-images
+images/*.png
 
 # IDE specific files
 .idea/
