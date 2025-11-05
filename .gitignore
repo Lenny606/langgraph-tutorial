@@ -38,3 +38,4 @@ coverage.xml
 .env.local
 *.log
 .DS_Store
+conversation_history.txt
