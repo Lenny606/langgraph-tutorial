@@ -91,7 +91,7 @@ def llm_call(state: AgentState) -> AgentState:
 
     print(f"\n Agent said: {res.content}")
     if hasattr(res, "tool_calls") and res.tool_calls:
-        print(f"Using tool: {[t["name"] for t in res.tool_calls]}")
+        print(f"Using tool: {[t['name'] for t in res.tool_calls]}")
 
     #     return updated state (as dict)
     return {"messages": list(state["messages"]) + [user_message, res]}
@@ -136,7 +136,6 @@ graph.add_conditional_edges(
     }
 )
 
-graph.add_edge("tools", "agent")
 
 agent = graph.compile()
 
